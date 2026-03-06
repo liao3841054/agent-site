@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 团队是怎么工作的？— agent.nanopromptlab.com</title>
+  <meta name="description" content="5分钟，从零到懂。不讲模型参数，只讲你关心的事。Agent、Skill、RAG、多Agent编排、Context Engineering。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo"><a href="index.html" style="color:inherit;text-decoration:none;">⚡ <span>Larry</span>'s AI Team</a></div>
+    <ul class="nav-links">
+      <li><a href="index.html">主页</a></li>
+      <li><a href="diary.html">工作日记</a></li>
+      <li><a href="science.html" class="active">原理科普</a></li>
+      <li><a href="skills.html">技能商店</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <div class="section-label">原理科普</div>
+    <h1>AI 团队是怎么工作的？</h1>
+    <p>5 分钟，从零到懂。<br>不讲模型参数，只讲你关心的事。</p>
+  </div>
+
+  <!-- Chapter 1 -->
+  <div class="chapter">
+    <div class="chapter-num">第一章</div>
+    <h2 class="chapter-title">Agent 不是聊天机器人。</h2>
+    <div class="chapter-body">
+      <p>人们以为 AI 就是能聊天的程序。错了。</p>
+      <br>
+      <p>聊天机器人是<strong>应答式</strong>的：你问，它答，结束。</p>
+      <p>Agent 是<strong>行动式</strong>的：你说目标，它拆解任务，调用工具，自主执行，反馈结果。</p>
+      <br>
+      <p>两者的区别，就是<strong>接线员和员工</strong>的区别。</p>
+      <br>
+      <p><strong>Agent 的核心能力：</strong></p>
+      <ul class="capability-list">
+        <li><span class="icon">👁️</span><span><strong>感知</strong>：读文件、搜网络、看数据</span></li>
+        <li><span class="icon">🧠</span><span><strong>思考</strong>：拆解任务、制定计划、判断优先级</span></li>
+        <li><span class="icon">⚡</span><span><strong>行动</strong>：调 API、写代码、发消息、存数据</span></li>
+        <li><span class="icon">📊</span><span><strong>反馈</strong>：报告结果、处理异常、等待下一个指令</span></li>
+      </ul>
+      <br>
+      <p>Larry 的技术专家⚙️就是这样工作的。你说"把这份报告部署到服务器"，它自己找 GitHub、下载、配置、测试、上线。你不需要教每一步。</p>
+      <div class="quote-block">
+        <p>"ChatGPT 是个聪明的外包，Agent 是个能独立完成工作的同事。你想要的是哪个？"</p>
+        <cite>— Larry</cite>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 2 -->
+  <div class="chapter">
+    <div class="chapter-num">第二章</div>
+    <h2 class="chapter-title">技能是 Agent 的超能力模块。</h2>
+    <div class="chapter-body">
+      <p>一个空白的 Agent 什么都做不了。就像一个聪明的新员工，没有培训，也交不出活。</p>
+      <br>
+      <p><strong>Skill 就是给 Agent 的技能培训包。</strong></p>
+      <br>
+      <p>每个 Skill 包含：</p>
+      <ul class="capability-list">
+        <li><span class="icon">📌</span><span><strong>这个技能用来干什么</strong>（定义）</span></li>
+        <li><span class="icon">⚡</span><span><strong>遇到什么情况触发</strong>（触发条件）</span></li>
+        <li><span class="icon">🔧</span><span><strong>用哪些工具来执行</strong>（工具调用）</span></li>
+        <li><span class="icon">✅</span><span><strong>怎么算做完了</strong>（完成标准）</span></li>
+      </ul>
+      <br>
+      <p>Larry 的笔杆子✍️有个叫 <code style="background:rgba(255,255,255,0.05);padding:2px 6px;border-radius:4px;font-size:13px;">baoyu-post-to-wechat</code> 的 Skill，触发条件是"文章写完且审核通过"，执行步骤是"格式化→上传封面图→发布→回传链接"，做完自动通知 Larry。</p>
+      <div class="quote-block">
+        <p>"Skill 是知识的固化。你教了一次，它记住了，以后永远这样干。人类员工会忘，Skill 不会。"</p>
+        <cite>— Larry</cite>
+      </div>
+      <p>你不需要每次都重新教 Agent 怎么做同一件事。封装成 Skill，一劳永逸。</p>
+    </div>
+  </div>
+
+  <!-- Chapter 3 -->
+  <div class="chapter">
+    <div class="chapter-num">第三章</div>
+    <h2 class="chapter-title">AI 说假话，不是它坏，是它不知道真相。</h2>
+    <div class="chapter-body">
+      <p>语言模型有个根本缺陷：训练截止日期之后的事它不知道，你自己的私有数据它更不知道。</p>
+      <br>
+      <p>你问它你公司的报销流程，它只能编一个听起来合理的答案。</p>
+      <br>
+      <p><strong>RAG（检索增强生成）就是解决这个问题的。</strong></p>
+      <br>
+      <p>工作原理很简单：</p>
+      <ul class="capability-list">
+        <li><span class="icon">1️⃣</span><span>把你的文档全部向量化，建立索引</span></li>
+        <li><span class="icon">2️⃣</span><span>用户提问时，先检索相关文档片段</span></li>
+        <li><span class="icon">3️⃣</span><span>把检索到的真实内容 + 用户问题一起送给 AI</span></li>
+        <li><span class="icon">4️⃣</span><span>AI 基于真实数据作答，不再靠猜</span></li>
+      </ul>
+      <br>
+      <p><strong>效果是什么：</strong> AI 说的每句话都有原文依据。它会说"根据你的第 37 号内部文件……"，而不是"我认为……"</p>
+      <br>
+      <p>Larry 为产品参谋长🔍搭建的竞品情报 RAG，每天自动更新，实时检索，再也不用担心 AI 在用过时的信息。</p>
+      <div class="quote-block">
+        <p>"不上 RAG 的 AI 系统，就是把一个失忆症患者放在客服岗位上。他很聪明，但他不知道你公司发生了什么。"</p>
+        <cite>— Larry</cite>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 4 -->
+  <div class="chapter">
+    <div class="chapter-num">第四章</div>
+    <h2 class="chapter-title">一个 AI 是助手，多个 AI 是组织。</h2>
+    <div class="chapter-body">
+      <p>单个 Agent 有局限：它的注意力有限，它的专业深度有限，它同时处理的任务数量有限。</p>
+      <br>
+      <p>就像一个全能员工，再厉害也做不到同时写代码、做分析、发内容。</p>
+      <br>
+      <p><strong>多 Agent 团队的逻辑：分工。</strong></p>
+      <br>
+      <p>Larry 的团队架构：</p>
+      <ul class="capability-list">
+        <li><span class="icon">👤</span><span><strong>总指挥（Larry）</strong>：定目标，做最终决策</span></li>
+        <li><span class="icon">🔍</span><span><strong>产品参谋长</strong>：负责分析、洞察、竞品、用户</span></li>
+        <li><span class="icon">⚙️</span><span><strong>技术专家</strong>：负责代码、部署、系统、自动化</span></li>
+        <li><span class="icon">✍️</span><span><strong>笔杆子</strong>：负责内容、文案、发布、传播</span></li>
+      </ul>
+      <br>
+      <p>三个 Agent 并行工作，各有专属 Skill，通过任务编排系统交接工作，Larry 只需要在关键节点做决策。</p>
+      <br>
+      <p style="font-weight:700; color: var(--text);">这不是科幻，这是工程问题。</p>
+      <br>
+      <p>每个 Agent 的边界要清晰，接口要定义好，结果要可验证。管 AI 团队，和管人类团队，本质没什么不同。就是更快，更便宜，不请假。</p>
+      <div class="quote-block">
+        <p>"AI 团队不是一个工具，是一套组织架构。架构设计得好，每多加一个 Agent，能力就指数级上升。"</p>
+        <cite>— Larry</cite>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter 5 -->
+  <div class="chapter">
+    <div class="chapter-num">第五章</div>
+    <h2 class="chapter-title">为什么同一个 AI，别人用得一塌糊涂，你用得行云流水？</h2>
+    <div class="chapter-body">
+      <p>不是你更聪明。是你的上下文设计得更好。</p>
+      <br>
+      <p><strong>Context Engineering（上下文工程）</strong>是 Larry 认为 2024 年最被低估的 AI 技能。</p>
+      <br>
+      <p>它包含：</p>
+      <ul class="capability-list">
+        <li><span class="icon">👤</span><span><strong>系统角色定义</strong>：告诉 AI 它是谁、它的边界在哪</span></li>
+        <li><span class="icon">📋</span><span><strong>任务框架设计</strong>：把复杂任务拆成 AI 能执行的步骤</span></li>
+        <li><span class="icon">💉</span><span><strong>知识注入策略</strong>：什么时候注入什么背景信息</span></li>
+        <li><span class="icon">📐</span><span><strong>输出格式约束</strong>：让 AI 输出你能直接用的结构</span></li>
+        <li><span class="icon">🧠</span><span><strong>记忆管理机制</strong>：长对话中如何保持上下文不"忘事"</span></li>
+      </ul>
+      <br>
+      <p>大多数人写 Prompt，只写了第一层：告诉 AI 要做什么。</p>
+      <br>
+      <p>Larry 写的是系统：五层上下文，每一层都有设计，每一层都有意图。结果是，他的 AI 团队第一次收到任务就能干对，而不是来回磨十几遍。</p>
+      <div class="quote-block">
+        <p>"Prompt 是一次性的对话，Context 是持续运行的系统。大多数人还在写对话，我在设计系统。"</p>
+        <cite>— Larry</cite>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chapter CTA -->
+  <div style="text-align:center; padding: 64px 0 80px;">
+    <p style="color: var(--text-muted); font-size: 16px; margin-bottom: 24px;">想看这套系统怎么建起来的？</p>
+    <div class="btn-group">
+      <a href="diary.html" class="btn btn-primary">读 Larry 的工作日记 →</a>
+      <a href="skills.html" class="btn btn-outline">看技能商店</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="index.html">主页</a> · 
+      <a href="diary.html">工作日记</a> · 
+      <a href="science.html">原理科普</a> · 
+      <a href="skills.html">技能商店</a>
+    </p>
+    <p style="margin-top: 12px; color: var(--text-dim);">agent.nanopromptlab.com · Larry's AI Team</p>
+  </div>
+</footer>
+
+</body>
+</html>

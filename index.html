@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>莱德的 AI 团队 — agent.nanopromptlab.com</title>
+  <meta name="description" content="我雇了一支 AI 团队，12年经验压注，赌的是未来十年。莱德和他的 AI 团队正在做你以为要一个部门才能做的事。">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">⚡ <span>Larry</span>'s AI Team</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">主页</a></li>
+      <li><a href="diary.html">工作日记</a></li>
+      <li><a href="science.html">原理科普</a></li>
+      <li><a href="skills.html">技能商店</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>我雇了一支 AI 团队，<br>12年经验压注，赌的是未来十年。</h1>
+    <p class="hero-sub">
+      <strong>莱德 · 连续创业者 · AI落地老炮 · 三年前开始，现在加速。</strong><br>
+      他和他的 AI 团队：产品参谋长🔍、技术专家⚙️、笔杆子✍️，<br>
+      正在做你以为要一个部门才能做的事。
+    </p>
+    <div class="btn-group">
+      <a href="diary.html" class="btn btn-primary">看他们在干什么 →</a>
+      <a href="diary.html" class="btn btn-outline">看 Larry 的工作日记</a>
+    </div>
+  </div>
+</section>
+
+<!-- DIARY CAROUSEL -->
+<section style="padding: 48px 0 80px; background: linear-gradient(180deg, transparent, rgba(245,166,35,0.02), transparent);">
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 40px;">
+      <div class="section-label">实战记录</div>
+      <h2 class="section-title">莱德的 AI 工作日记</h2>
+      <p class="section-desc" style="margin: 0 auto;">不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。</p>
+    </div>
+
+    <div class="carousel-wrap" id="carouselWrap">
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slides injected by JS -->
+      </div>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+
+    <div style="text-align:center; margin-top: 32px;">
+      <a href="diary.html" class="btn btn-outline">查看全部日记 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="padding: 64px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="grid-template-columns: repeat(3,1fr); gap: 20px;" id="statsGrid">
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">12年</div>
+        <div class="stat-desc">一线工作经验压注，不是纸上谈兵</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">3年</div>
+        <div class="stat-desc">AI创业实战，在别人还在讨论时他已经在部署</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">40+</div>
+        <div class="stat-desc">已上线 Skill 技能包，覆盖产品/技术/内容全链路</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">3个</div>
+        <div class="stat-desc">AI 团队成员，各司其职，协作运转</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">7×24</div>
+        <div class="stat-desc">小时不间断运行，不请假不摸鱼不迟到</div>
+      </div>
+      <div class="card" style="text-align:center;">
+        <div class="stat-number">80%</div>
+        <div class="stat-desc">Context Engineering 优化后幻觉率下降幅度</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4大核心能力 -->
+<section>
+  <div class="container">
+    <div style="text-align:center; margin-bottom: 56px;">
+      <div class="section-label">核心能力</div>
+      <h2 class="section-title">4 大能力，构成完整的 AI 团队</h2>
+      <p class="section-desc" style="margin: 0 auto;">每一项能力都有真实场景，每一个场景都发生过。</p>
+    </div>
+
+    <!-- Tabs -->
+    <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 32px;" id="abilityTabs">
+      <button class="ability-tab active" data-tab="0">🔬 Context Engineering</button>
+      <button class="ability-tab" data-tab="1">📁 RAG 知识引擎</button>
+      <button class="ability-tab" data-tab="2">⚙️ 本地部署</button>
+      <button class="ability-tab" data-tab="3">🎯 多 Agent 编排</button>
+    </div>
+
+    <div id="abilityPanels">
+
+      <!-- Panel 0: Context Engineering -->
+      <div class="ability-panel card" style="padding: 32px;">
+        <div class="ability-header">
+          <div class="ability-title">你写的 Prompt 是废料，他的才叫燃料。</div>
+          <div class="ability-subtitle">一样的模型，结果差十倍。差的不是 AI，是上下文工程。</div>
+        </div>
+        <div class="scenario-grid">
+          <div class="scenario">
+            <div class="scenario-label">🔬 场景 1 — 从废话到精准</div>
+            <p>一个客服系统，原来的 Prompt 写了 500 字，AI 还是答非所问。Larry 重写了上下文结构——角色定义、约束边界、输出格式、示例锚点——四层下去，客诉率下降了 60%。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">📊 场景 2 — 让 AI 知道它不知道什么</div>
+            <p>RAG 系统上线初期，AI 经常"编"答案。加了一层"知识边界声明"的上下文，AI 开始主动说"这个问题我的知识库里没有"。幻觉问题，是上下文没给够，不是模型太蠢。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">⚡ 场景 3 — 上下文即系统</div>
+            <p>产品参谋长每次启动，都自动加载：竞品库、用户画像、历史决策记录。不用每次重新解释背景。Larry 的原话：上下文不是 Prompt 的附件，上下文就是系统本身。</p>
+          </div>
+        </div>
+        <div class="quote-block" style="margin-top: 24px; margin-bottom: 0;">
+          <p>"大多数人在调教 AI，我在设计系统。区别是：调教是一次性的，系统是可以跑的。"</p>
+          <cite>— Larry</cite>
+        </div>
+      </div>
+
+      <!-- Panel 1: RAG -->
+      <div class="ability-panel card" style="padding: 32px; display:none;">
+        <div class="ability-header">
+          <div class="ability-title">让 AI 说真话的方法只有一个：给它看真实的资料。</div>
+          <div class="ability-subtitle">没有 RAG 的 AI 是在背课文，有 RAG 的 AI 才是在查档案。</div>
+        </div>
+        <div class="scenario-grid">
+          <div class="scenario">
+            <div class="scenario-label">📁 场景 1 — 公司知识库上线</div>
+            <p>一家 50 人公司，制度文档散落在飞书、钉钉、本地硬盘。Larry 用 RAG 把它们统一索引，员工问任何内规，AI 直接引用原文作答，附带页码。HR 主管说：这比我还懂公司制度。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">🔍 场景 2 — 竞品情报实时更新</div>
+            <p>产品参谋长每天爬取竞品更新，存入向量库。Larry 问"竞品昨天有什么动作"，AI 给的是当天数据，不是三个月前的训练集。情报不过夜，决策不滞后。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">📰 场景 3 — 行业报告秒变可用洞察</div>
+            <p>一份 80 页的行业报告，人读要 3 小时，还不一定抓到重点。RAG 索引后，直接问"对我们的影响是什么"，30 秒出 5 条定制化结论。报告的价值，在于被用上，不在于被收藏。</p>
+          </div>
+        </div>
+        <div class="quote-block" style="margin-top: 24px; margin-bottom: 0;">
+          <p>"AI 的智商不是问题，记忆力才是。RAG 就是给 AI 装上了真正的大脑。"</p>
+          <cite>— Larry</cite>
+        </div>
+      </div>
+
+      <!-- Panel 2: 本地部署 -->
+      <div class="ability-panel card" style="padding: 32px; display:none;">
+        <div class="ability-header">
+          <div class="ability-title">云端 AI 很好，但有些数据，不能出门。</div>
+          <div class="ability-subtitle">能跑在你自己服务器上的 AI，才是真正属于你的 AI。</div>
+        </div>
+        <div class="scenario-grid">
+          <div class="scenario">
+            <div class="scenario-label">🔒 场景 1 — 敏感数据不出网</div>
+            <p>客户合同、用户隐私数据、内部财务报告——这些东西送给 OpenAI 的 API 是违规的。Larry 用 Ollama 本地跑 Qwen，法务数据分析全程在内网，数据主权在自己手里。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">⚙️ 场景 2 — systemd 让 Agent 永不下线</div>
+            <p>技术专家、笔杆子、产品参谋长，三个 Agent 全部用 systemd 部署成系统服务。服务器重启自动拉起，崩溃自动重启，Larry 旅行时不用担心 Agent 死掉。7×24，不是口号，是配置。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">🚀 场景 3 — Cloudflare 做流量入口</div>
+            <p>agent.nanopromptlab.com 背后是一套完整的部署架构：Cloudflare Workers 做边缘路由，VPS 跑主服务，域名解析 + SSL 自动续签。用户访问感觉丝滑，Larry 自己管得住，不依赖任何第三方平台。</p>
+          </div>
+        </div>
+        <div class="quote-block" style="margin-top: 24px; margin-bottom: 0;">
+          <p>"SaaS 是租房，本地部署是买房。租的永远是别人的，部署到自己服务器，才叫落地。"</p>
+          <cite>— Larry</cite>
+        </div>
+      </div>
+
+      <!-- Panel 3: 多Agent编排 -->
+      <div class="ability-panel card" style="padding: 32px; display:none;">
+        <div class="ability-header">
+          <div class="ability-title">一个人指挥，三个 Agent 干活，效率是团队的十倍。</div>
+          <div class="ability-subtitle">不是让 AI 更聪明，是让多个 AI 分工协作。</div>
+        </div>
+        <div class="scenario-grid">
+          <div class="scenario">
+            <div class="scenario-label">🎯 场景 1 — 一个指令，三个并行任务</div>
+            <p>Larry 说："出一份新产品的完整上线方案。"产品参谋长做竞品分析，技术专家写技术规格，笔杆子起草推广文案——三个任务并行，45 分钟后汇总。一个人说话，三个方向同时动。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">🔄 场景 2 — Agent 互相传球</div>
+            <p>笔杆子写完文章，自动传给产品参谋长做事实核查，确认数据准确后再传给技术专家发布上线。每个 Agent 只做自己擅长的，交接点由编排系统控制，Larry 不用手动转发任何文件。</p>
+          </div>
+          <div class="scenario">
+            <div class="scenario-label">📈 场景 3 — 错误触发重试机制</div>
+            <p>一次任务编排中，技术专家遇到 API 超时。编排系统自动触发重试，同时通知 Larry。Larry 睡着了，凌晨 4 点任务自动完成，早上醒来收到完成报告。失败不是终点，是触发器。</p>
+          </div>
+        </div>
+        <div class="quote-block" style="margin-top: 24px; margin-bottom: 0;">
+          <p>"管理 AI 团队和管理人类团队没什么不同：分工要清，接口要明，结果要可验证。"</p>
+          <cite>— Larry</cite>
+        </div>
+      </div>
+
+    </div><!-- /abilityPanels -->
+  </div>
+</section>
+
+<!-- SKILLS PREVIEW -->
+<section style="background: linear-gradient(180deg, transparent, rgba(245,166,35,0.03), transparent);">
+  <div class="container">
+    <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <div class="section-label">技能商店</div>
+        <h2 class="section-title">40+ 个在生产环境运行的技能包</h2>
+        <p class="section-desc">不是 demo，是每天在跑的系统。</p>
+      </div>
+      <a href="skills.html" class="btn btn-outline">查看全部 →</a>
+    </div>
+
+    <div class="grid-2" style="grid-template-columns: repeat(3, 1fr); gap: 16px;" id="skillsPreview">
+      <div class="skill-card">
+        <div class="skill-owner">笔杆子 ✍️</div>
+        <div class="skill-name">内容全链路</div>
+        <div class="skill-desc">从选题到发布，公众号/Thread/脚本一条龙，覆盖微信、X、小红书</div>
+        <div class="skill-count">6个技能</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-owner">产品参谋长 🔍</div>
+        <div class="skill-name">竞品情报雷达</div>
+        <div class="skill-desc">7×24 监控竞品动态，自动生成情报摘要，定时推送到你的工作流</div>
+        <div class="skill-count">4个技能</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-owner">技术专家 ⚙️</div>
+        <div class="skill-name">RAG 知识引擎</div>
+        <div class="skill-desc">把你的文档变成可检索的知识库，支持飞书/Notion/本地文件多源接入</div>
+        <div class="skill-count">5个技能</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-owner">技术专家 ⚙️</div>
+        <div class="skill-name">代码交付流水线</div>
+        <div class="skill-desc">从需求到 PR，自动测试、自动修 bug、自动提交，Code Agent 全程接管</div>
+        <div class="skill-count">7个技能</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-owner">产品参谋长 🔍</div>
+        <div class="skill-name">用户洞察提炼</div>
+        <div class="skill-desc">把用户反馈、访谈录音、问卷数据变成可执行的产品决策依据</div>
+        <div class="skill-count">4个技能</div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-owner">技术专家 ⚙️</div>
+        <div class="skill-name">本地部署全家桶</div>
+        <div class="skill-desc">Ollama 本地模型 + systemd 守护 + Cloudflare 边缘路由，一套跑通</div>
+        <div class="skill-count">8个技能</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>你也可以有自己的 AI 团队。</h2>
+    <p>不是买个工具，是搭一套系统。<br>Larry 花了 3 年趟平的坑，不用你再踩一遍。</p>
+    <div class="btn-group">
+      <a href="diary.html" class="btn btn-primary">看 Larry 怎么做的 →</a>
+      <a href="science.html" class="btn btn-outline">了解 AI 团队原理</a>
+      <a href="skills.html" class="btn btn-outline">选一个技能包</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <p>
+      <a href="index.html">主页</a> · 
+      <a href="diary.html">工作日记</a> · 
+      <a href="science.html">原理科普</a> · 
+      <a href="skills.html">技能商店</a>
+    </p>
+    <p style="margin-top: 12px; color: var(--text-dim);">agent.nanopromptlab.com · Larry's AI Team</p>
+  </div>
+</footer>
+
+<style>
+.ability-tab {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font);
+}
+.ability-tab:hover {
+  color: var(--text);
+  border-color: var(--border-hover);
+}
+.ability-tab.active {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+#skillsPreview {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 768px) {
+  #skillsPreview { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+// ---- Diary Carousel ----
+const diaryItems = [
+  { day: 'Day 1', title: '第一次让 AI 帮我写完整个产品需求文档，我只说了两句话' },
+  { day: 'Day 3', title: '把 RAG 跑通的那个下午，检索准确率从 40% 跳到 91%' },
+  { day: 'Day 7', title: '凌晨两点，技术专家自己发现了 bug，自己修了，自己提了 PR' },
+  { day: 'Day 12', title: '用 systemd 把三个 Agent 部署上服务器，7×24 不停机' },
+  { day: 'Day 15', title: '笔杆子写了一篇公众号，我一个字没改，发出去阅读量破万' },
+  { day: 'Day 19', title: 'Cloudflare Workers 配完，agent.nanopromptlab.com 上线了' },
+  { day: 'Day 23', title: '产品参谋长分析了 50 个竞品，给我一份 12 页的竞争策略' },
+  { day: 'Day 28', title: '第一次让 Agent 团队互相协作完成一个项目，我只做了最终决策' },
+  { day: 'Day 34', title: '用 Context Engineering 重写了 Prompt，幻觉率下降了 80%' },
+  { day: 'Day 41', title: '本地部署 Ollama，敏感数据再也不出公司网络' },
+];
+
+const track = document.getElementById('carouselTrack');
+const dotsContainer = document.getElementById('carouselDots');
+
+// Show 3 per slide
+const chunkSize = 3;
+const chunks = [];
+for (let i = 0; i < diaryItems.length; i += chunkSize) {
+  chunks.push(diaryItems.slice(i, i + chunkSize));
+}
+
+chunks.forEach((chunk, idx) => {
+  const slide = document.createElement('div');
+  slide.className = 'carousel-item';
+  slide.innerHTML = `<div style="display:flex;flex-direction:column;gap:12px;">
+    ${chunk.map(item => `
+      <a href="diary.html" class="diary-card" style="text-decoration:none;">
+        <div class="diary-day">${item.day}</div>
+        <div class="diary-title">${item.title}</div>
+      </a>
+    `).join('')}
+  </div>`;
+  track.appendChild(slide);
+
+  const dot = document.createElement('button');
+  dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goTo(idx));
+  dotsContainer.appendChild(dot);
+});
+
+let current = 0;
+function goTo(idx) {
+  current = idx;
+  track.style.transform = `translateX(-${idx * 100}%)`;
+  document.querySelectorAll('.carousel-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === idx);
+  });
+}
+
+// Auto-advance
+setInterval(() => goTo((current + 1) % chunks.length), 4000);
+
+// ---- Ability Tabs ----
+document.querySelectorAll('.ability-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const idx = +btn.dataset.tab;
+    document.querySelectorAll('.ability-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.ability-panel').forEach((p, i) => {
+      p.style.display = i === idx ? 'block' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
