@@ -64,3 +64,34 @@
 - 所有标题均来自 COPY.md 的真实叙事场景
 
 **commit**: `feat: P0 - rebrand skills page + fix diary titles [2026-03-08]`
+
+---
+
+## P1 快速任务完成记录
+
+**执行时间**：2026-03-08 09:07 UTC
+
+### P1-8：SEO Open Graph meta ✅
+
+为 4 个页面添加完整的 OG + Twitter Card meta 标签：
+
+| 页面 | og:title |
+|------|----------|
+| index.html | 我雇了一支 AI 团队，12年经验压注，赌的是未来十年。 |
+| diary.html | 不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。 |
+| science.html | AI 团队是怎么工作的？5 分钟，从零到懂。 |
+| skills.html | 这些不是 demo，是每天在生产环境运行的系统。 |
+
+每页 meta 包含：og:title、og:description、og:image（og-cover.png）、og:url、og:type、twitter:card、twitter:title、twitter:description
+
+sitemap.xml 已生成，包含 4 个 URL，priority：/ → 1.0，diary → 0.9，science/skills → 0.8
+
+### P1-2：全局 Footer 社媒链接 ✅
+
+4 个页面 footer 全部升级，新增 GitHub、X (Twitter)、公众号链接（占位 href），hover 变 accent 色。
+
+### P1-7：首页统计区双栏布局 ✅
+
+index.html STATS 区从 3列网格升级为两栏：左边📖故事梗概（标题+4条bullet），右边🔥成果数字（2×3卡片）。响应式 768px 以下单栏。
+
+**commit**: feat: P1 - SEO meta + social footer + stats dual-column [2026-03-08]
