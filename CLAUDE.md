@@ -57,33 +57,33 @@ systemctl restart agent-http.service
 auto: sync diary+skills [2026-03-08 01:08 UTC]
 ```
 
+### 每日构建系统（已完成 2026-03-08）
+
+- ✅ `scripts/summarize.ts` — 读取 memory + git log，LLM 提炼摘要 + 插画 prompt（OpenAI fallback → Gemini）
+- ✅ `scripts/update-diary.py` — 在 diary.html 顶部插入日记卡片（含插画）
+- ✅ `scripts/daily-build.sh` — 主构建脚本，串联上述步骤
+- ✅ `systemd timer` — `agent-daily-build.timer`，每天 UTC 00:00（CST 08:00）触发
+- ✅ `style.css` — 添加 `.diary-card--illustrated` 样式
+
+**触发方式：**
+- 自动：每天 UTC 00:00（CST 08:00）by `agent-daily-build.timer`
+- 手动：`systemctl start agent-daily-build.service`
+- 本地测试：`bash scripts/daily-build.sh [YYYY-MM-DD]`
+
+**LLM 提炼逻辑：**
+- 优先 OpenAI gpt-4o-mini；如 quota 耗尽，自动 fallback 到 Gemini 2.0 Flash
+- 如两者都失败，使用硬编码默认 prompt（保证流程不中断）
+
+**插画风格：**
+- 16:9 叙事插画，Larry + AI 机器人团队
+- 橙红色 (#FF4B2B) accent，极简未来感工作台
+- Google Imagen via `baoyu-image-gen` skill
+
 ---
 
-## 🎯 待实现：每日定时构建 + 插画生成
+## 🎯 待实现
 
-> **Larry 的需求（2026-03-08）**：
-> 1. 每天定时构建部署一次
-> 2. 每天生成一张插画（展示当天做的事情）
-> 3. 在网站 diary.html 上展示插画
-
-### 设计思路（待确认）
-
-**数据来源**：从 git commits 读取当天的工作记录  
-**插画生成**：调用 AI 图像生成 API，根据当日摘要生成插图，存入 `illustrations/YYYY-MM-DD.png`  
-**展示方式**：diary.html 每条日记卡片顶部显示对应日期插画  
-**触发时机**：每天 UTC 00:00（或 Asia/Shanghai 08:00）执行  
-
-### 实现步骤（TODO）
-
-- [ ] 确认插画数据来源（git commits / 手动日志 / 飞书）
-- [ ] 确认 AI 图像生成 API（DALL-E / Stability / 其他）
-- [ ] 编写 `scripts/daily-build.sh`
-  - 读取当日工作摘要
-  - 调用图像生成 API → 存入 `illustrations/YYYY-MM-DD.png`
-  - 更新 `diary.html` 插入新日记卡片+插画
-  - git commit + push
-- [ ] 配置 crontab 或 systemd timer
-- [ ] 在 `diary.html` 展示插画（卡片顶部图片区域）
+（暂无）
 
 ---
 
@@ -108,7 +108,7 @@ auto: sync diary+skills [2026-03-08 01:08 UTC]
 | 2026-03-06 | 初始网站建立，4页面 HTML + Cloudflare Tunnel + systemd |
 | 2026-03-06 | 龙虾橙红配色迭代 v2 |
 | 2026-03-08 | COPY.md 全站文案完成（591行），自动同步 cron 上线 |
-| 2026-03-08 | 需求提出：每日定时构建 + AI 插画生成（待实现） |
+| 2026-03-08 | 每日构建系统 + AI 插画生成完成（systemd timer 激活）|
 
 ---
 
