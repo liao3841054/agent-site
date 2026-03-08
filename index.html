@@ -71,30 +71,47 @@
 <!-- STATS -->
 <section style="padding: 64px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
   <div class="container">
-    <div class="grid-3" style="grid-template-columns: repeat(3,1fr); gap: 20px;" id="statsGrid">
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">12年</div>
-        <div class="stat-desc">一线工作经验压注，不是纸上谈兵</div>
+    <div class="stats-dual-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;">
+      <!-- 左栏：故事梗概 -->
+      <div>
+        <div class="section-label">📖 故事梗概</div>
+        <h3 style="font-size: 1.4rem; font-weight: 700; margin: 12px 0 24px; color: var(--text);">12年经验 + 3年 AI 实战，<br>他在别人讨论时已经在部署。</h3>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px;">
+          <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="color: var(--accent); font-size: 1.2rem;">🎯</span><span style="color: var(--text-muted); font-size: 0.95rem;">连续创业者，深耕 AI 落地 3 年，见过最多踩坑的人</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="color: var(--accent); font-size: 1.2rem;">⚙️</span><span style="color: var(--text-muted); font-size: 0.95rem;">技术全栈：RAG / 本地部署 / 多 Agent 编排 / Context Engineering</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="color: var(--accent); font-size: 1.2rem;">📡</span><span style="color: var(--text-muted); font-size: 0.95rem;">AI 团队 7×24 运转，Larry 专注决策，Agent 负责执行</span></li>
+          <li style="display: flex; gap: 12px; align-items: flex-start;"><span style="color: var(--accent); font-size: 1.2rem;">✍️</span><span style="color: var(--text-muted); font-size: 0.95rem;">笔杆子自动写文章、参谋长自动做竞品分析、专家自动交付代码</span></li>
+        </ul>
       </div>
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">3年</div>
-        <div class="stat-desc">AI创业实战，在别人还在讨论时他已经在部署</div>
-      </div>
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">40+</div>
-        <div class="stat-desc">已上线 Skill 技能包，覆盖产品/技术/内容全链路</div>
-      </div>
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">3个</div>
-        <div class="stat-desc">AI 团队成员，各司其职，协作运转</div>
-      </div>
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">7×24</div>
-        <div class="stat-desc">小时不间断运行，不请假不摸鱼不迟到</div>
-      </div>
-      <div class="card" style="text-align:center;">
-        <div class="stat-number">80%</div>
-        <div class="stat-desc">Context Engineering 优化后幻觉率下降幅度</div>
+      <!-- 右栏：数字卡片 -->
+      <div>
+        <div class="section-label">🔥 成果数字</div>
+        <div style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px;" id="statsGrid">
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">12年</div>
+            <div class="stat-desc">一线经验</div>
+          </div>
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">3年</div>
+            <div class="stat-desc">AI 创业实战</div>
+          </div>
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">40+</div>
+            <div class="stat-desc">技能包上线</div>
+          </div>
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">3个</div>
+            <div class="stat-desc">AI 团队成员</div>
+          </div>
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">7×24</div>
+            <div class="stat-desc">小时不间断</div>
+          </div>
+          <div class="card" style="text-align:center; padding: 20px 16px;">
+            <div class="stat-number">80%</div>
+            <div class="stat-desc">幻觉率下降</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -374,6 +391,7 @@
 }
 @media (max-width: 768px) {
   #skillsPreview { grid-template-columns: 1fr; }
+  .stats-dual-col { grid-template-columns: 1fr !important; }
 }
 </style>
 
