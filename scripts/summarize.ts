@@ -38,11 +38,11 @@ ${gitLog || "(none)"}
 
 // 4. 调用 LLM 提炼摘要
 const llmPrompt = `
-你是莱德（Larry）的 AI 总指挥莱德Bot，正在为个人品牌网站 agent.nanopromptlab.com 生成每日工作日记摘要。
+你是Larry 的 AI 总指挥 LarryBot，正在为个人品牌网站 agent.nanopromptlab.com 生成每日工作日记摘要。
 
 请阅读以下当日工作记录，提炼出：
 1. 一句中文摘要（30字以内），描述今天最重要的事
-2. 一个英文叙事插画场景描述（50字以内），描述莱德带着AI团队做这件事的画面，用于 Google Imagen 生图。风格要求：narrative illustration, Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) leading glowing AI robot assistants, futuristic minimal workspace, orange-red accent, focused energetic mood
+2. 一个英文叙事插画场景描述（50字以内），描述 Larry 带着AI团队做这件事的画面，用于 Google Imagen 生图。风格要求：narrative illustration, Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) leading glowing AI robot assistants, futuristic minimal workspace, orange-red accent, focused energetic mood
 3. 一个适合展示的中文日记标题（20字以内）
 4. 2-4个适合的标签，从以下选：产品/技术/内容/自动化/多Agent/RAG/部署
 
@@ -117,7 +117,7 @@ try {
     // Ultimate fallback: generate default based on date
     console.error("Gemini also failed:", (err2 as Error).message);
     rawJson = JSON.stringify({
-      summary: `${date} 莱德带着 AI 团队持续构建个人品牌站`,
+      summary: `${date} Larry 带着 AI 团队持续构建个人品牌站`,
       scene_prompt: `Larry sits at a glowing workstation surrounded by AI robot assistants reviewing code and deployment logs, orange-red holographic displays, futuristic minimal workspace, focused and energetic`,
       diary_title: `每日构建：AI 团队系统运转中`,
       tags: ["自动化", "技术", "多Agent"]

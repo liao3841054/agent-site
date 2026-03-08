@@ -77,7 +77,7 @@ git commit -m "feat: add scripts directory for daily build system"
 **功能：** 读取 memory/YYYY-MM-DD.md + 当日 git commits，调用 OpenAI/Google LLM，输出 JSON：
 ```json
 {
-  "summary": "今天莱德带着AI团队...",
+  "summary": "今天Larry带着AI团队...",
   "scene_prompt": "Larry is reviewing a RAG pipeline diagram on holographic screen...",
   "diary_title": "RAG流水线调优：从失忆到全知",
   "tags": ["RAG", "技术", "自动化"]
@@ -127,11 +127,11 @@ ${gitLog || "(none)"}
 
 // 4. 调用 LLM 提炼摘要
 const prompt = `
-你是莱德（Larry）的 AI 总指挥莱德Bot，正在为个人品牌网站 agent.nanopromptlab.com 生成每日工作日记摘要。
+你是Larry（Larry）的 AI 总指挥LarryBot，正在为个人品牌网站 agent.nanopromptlab.com 生成每日工作日记摘要。
 
 请阅读以下当日工作记录，提炼出：
 1. 一句中文摘要（30字以内），描述今天最重要的事
-2. 一个英文叙事插画场景描述（50字以内），描述莱德带着AI团队做这件事的画面，用于 Google Imagen 生图。风格要求：narrative illustration, Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) leading glowing AI robot assistants, futuristic minimal workspace, orange-red accent, focused energetic mood
+2. 一个英文叙事插画场景描述（50字以内），描述Larry带着AI团队做这件事的画面，用于 Google Imagen 生图。风格要求：narrative illustration, Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) leading glowing AI robot assistants, futuristic minimal workspace, orange-red accent, focused energetic mood
 3. 一个适合展示的中文日记标题（20字以内）
 4. 2-4个适合的标签，从以下选：产品/技术/内容/自动化/多Agent/RAG/部署
 

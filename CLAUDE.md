@@ -1,6 +1,6 @@
 # CLAUDE.md — agent-site 项目记忆
 
-> 这是 LarryBot（莱德的 AI 总指挥）的项目记忆文件。
+> 这是 LarryBot（Larry 的 AI 总指挥）的项目记忆文件。
 > 每次进入这个项目，先读这个文件，不要重新发明轮子。
 
 ---
@@ -104,7 +104,7 @@ auto: sync diary+skills [2026-03-08 01:08 UTC]
 | 日期 | 事件 |
 |------|------|
 | 2026-03-05 | ai-news-radar 项目部署全流程打通 |
-| 2026-03-06 | main Agent 升级为莱德（总指挥），图像生成能力上线 |
+| 2026-03-06 | main Agent 升级为 Larry（总指挥），图像生成能力上线 |
 | 2026-03-06 | 初始网站建立，4页面 HTML + Cloudflare Tunnel + systemd |
 | 2026-03-06 | 龙虾橙红配色迭代 v2 |
 | 2026-03-08 | COPY.md 全站文案完成（591行），自动同步 cron 上线 |
