@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 update-diary.py - 在 diary.html 顶部插入当日日记卡片（含插画）
-Usage: python3 update-diary.py --date YYYY-MM-DD --title "标题" --tags "tag1,tag2" --image illustrations/YYYY-MM-DD.png
+Usage: python3 update-diary.py --date YYYY-MM-DD --title "标题" --tags "tag1,tag2" --image illustrations/YYYY-MM-DD.png [--evolution "进化描述"] [--insight "行动启发"]
 """
 
 import argparse
@@ -16,6 +16,8 @@ def main():
     parser.add_argument("--title", required=True)
     parser.add_argument("--tags", required=True)   # comma-separated
     parser.add_argument("--image", required=True)  # relative path
+    parser.add_argument("--evolution", default="")  # 系统进化描述
+    parser.add_argument("--insight", default="")    # 行动启发
     parser.add_argument("--diary", default="diary.html")
     args = parser.parse_args()
 
@@ -30,12 +32,19 @@ def main():
     tags_html = "".join(f'<span class="tag">{t}</span>' for t in tags)
     data_tags = ",".join(tags)
 
-    # 新卡片 HTML（含顶部插画图）
+    # evolution + insight 区域（如有）
+    meta_html = ""
+    if args.evolution:
+        meta_html += f'\n        <div class="diary-evolution">⚡ {args.evolution}</div>'
+    if args.insight:
+        meta_html += f'\n        <div class="diary-insight">💡 {args.insight}</div>'
+
+    # 新卡片 HTML（含顶部插画图 + 进化描述 + 行动启发）
     new_card = f'''    <div class="diary-card diary-card--illustrated" data-tags="{data_tags}">
       <img class="diary-illustration" src="{args.image}" alt="每日插画 {args.date}" loading="lazy">
       <div class="diary-day">{args.date}</div>
       <div>
-        <div class="diary-title">{args.title}</div>
+        <div class="diary-title">{args.title}</div>{meta_html}
         <div class="diary-tags">
           {tags_html}
         </div>

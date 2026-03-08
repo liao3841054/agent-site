@@ -35,11 +35,14 @@ echo "$SUMMARY_JSON"
 
 SCENE_PROMPT=$(echo "$SUMMARY_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['scene_prompt'])")
 DIARY_TITLE=$(echo "$SUMMARY_JSON"  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['diary_title'])")
+EVOLUTION=$(echo "$SUMMARY_JSON"    | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('evolution', d.get('summary','')))")
+INSIGHT=$(echo "$SUMMARY_JSON"      | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('insight',''))")
 TAGS=$(echo "$SUMMARY_JSON"         | python3 -c "import sys,json; d=json.load(sys.stdin); print(','.join(d['tags']))")
 
-echo "  Scene:  $SCENE_PROMPT"
-echo "  Title:  $DIARY_TITLE"
-echo "  Tags:   $TAGS"
+echo "  Evolution: $EVOLUTION"
+echo "  Insight:   $INSIGHT"
+echo "  Title:     $DIARY_TITLE"
+echo "  Tags:      $TAGS"
 
 # ── Step 2: 生成插画（baoyu-image-gen, Google Imagen, 16:9）──────────────────
 echo ""
@@ -69,7 +72,9 @@ python3 "$SCRIPTS_DIR/update-diary.py" \
   --date "$DATE" \
   --title "$DIARY_TITLE" \
   --tags "$TAGS" \
-  --image "illustrations/${DATE}.png"
+  --image "illustrations/${DATE}.png" \
+  --evolution "$EVOLUTION" \
+  --insight "$INSIGHT"
 
 # ── Step 4: Git commit + push ─────────────────────────────────────────────────
 echo ""

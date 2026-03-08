@@ -38,21 +38,27 @@ ${gitLog || "(none)"}
 
 // 4. 调用 LLM 提炼摘要
 const llmPrompt = `
-你是Larry 的 AI 总指挥 LarryBot，正在为个人品牌网站 agent.nanopromptlab.com 生成每日工作日记摘要。
+你是 Larry 的 AI 总指挥 LarryBot。Larry 是一位有12年经验的 AI 落地创业者，正在用 AI 团队构建个人品牌站 agent.nanopromptlab.com。
 
-请阅读以下当日工作记录，提炼出：
-1. 一句中文摘要（30字以内），描述今天最重要的事
-2. 一个英文叙事插画场景描述（50字以内），描述 Larry 带着AI团队做这件事的画面，用于 Google Imagen 生图。风格要求：narrative illustration, Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) leading glowing AI robot assistants, futuristic minimal workspace, orange-red accent, focused energetic mood
-3. 一个适合展示的中文日记标题（20字以内）
-4. 2-4个适合的标签，从以下选：产品/技术/内容/自动化/多Agent/RAG/部署
+请阅读以下当日工作记录，**不要**总结"做了什么"，而是提炼出今天发生的**系统进化节点**——
+今天之后，Larry 的 AI 团队/认知/能力跃迁到了哪个新台阶？这个跃迁对读者有什么行动启发？
 
-输出严格 JSON 格式：
+【提炼框架】
+- 忽略执行细节（改了哪个文件、调了哪个 API）
+- 聚焦"升级了什么"：新增了什么能力？打通了什么瓶颈？验证了什么假设？改变了什么工作方式？
+- 用"之前 vs 之后"的视角思考
+- 标题要有锋芒，像万维刚风格：下判断，不温吞
+
+【输出 JSON 格式】
 {
-  "summary": "中文摘要",
-  "scene_prompt": "English scene description for image generation",
-  "diary_title": "日记标题",
+  "evolution": "一句话描述今天的系统进化（25字以内，有判断力，非流水账）",
+  "insight": "对读者的行动启发，一句话（30字以内），让人看完想抄作业",
+  "scene_prompt": "English narrative illustration scene (60 words max): Larry (tech entrepreneur, casual hoodie, Chinese male, 30s) and glowing AI robot assistants at a specific decisive moment that captures today's evolution — NOT generic office work. Include a visual metaphor for the upgrade/breakthrough. Futuristic minimal workspace, orange-red accent (#FF4B2B), cinematic lighting, focused energetic mood. No text, no speech bubbles.",
+  "diary_title": "日记标题（20字以内，有锋芒，体现进化而非任务）",
   "tags": ["tag1", "tag2"]
 }
+
+标签从以下选2-4个：产品/技术/内容/自动化/多Agent/RAG/部署
 
 工作记录：
 ${context}
