@@ -35,14 +35,16 @@ echo "$SUMMARY_JSON"
 
 SCENE_PROMPT=$(echo "$SUMMARY_JSON" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['scene_prompt'])")
 DIARY_TITLE=$(echo "$SUMMARY_JSON"  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['diary_title'])")
-EVOLUTION=$(echo "$SUMMARY_JSON"    | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('evolution', d.get('summary','')))")
+HOOK=$(echo "$SUMMARY_JSON"         | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('hook',''))")
+BODY=$(echo "$SUMMARY_JSON"         | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('body',''))")
 INSIGHT=$(echo "$SUMMARY_JSON"      | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('insight',''))")
+STATS=$(echo "$SUMMARY_JSON"        | python3 -c "import sys,json; d=json.load(sys.stdin); print(json.dumps(d.get('stats',{})))")
 TAGS=$(echo "$SUMMARY_JSON"         | python3 -c "import sys,json; d=json.load(sys.stdin); print(','.join(d['tags']))")
 
-echo "  Evolution: $EVOLUTION"
-echo "  Insight:   $INSIGHT"
-echo "  Title:     $DIARY_TITLE"
-echo "  Tags:      $TAGS"
+echo "  Title:   $DIARY_TITLE"
+echo "  Hook:    $HOOK"
+echo "  Insight: $INSIGHT"
+echo "  Tags:    $TAGS"
 
 # ── Step 2: 生成插画（baoyu-image-gen, Google Imagen, 16:9）──────────────────
 echo ""
@@ -73,8 +75,10 @@ python3 "$SCRIPTS_DIR/update-diary.py" \
   --title "$DIARY_TITLE" \
   --tags "$TAGS" \
   --image "illustrations/${DATE}.png" \
-  --evolution "$EVOLUTION" \
-  --insight "$INSIGHT"
+  --hook "$HOOK" \
+  --body "$BODY" \
+  --insight "$INSIGHT" \
+  --stats "$STATS"
 
 # ── Step 4: Git commit + push ─────────────────────────────────────────────────
 echo ""
