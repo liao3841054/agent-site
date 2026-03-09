@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Larry 团队的技能包 — agent.nanopromptlab.com</title>
   <meta name="description" content="这些不是 demo，是每天在生产环境运行的系统。每一个 Skill，都是踩过坑之后的沉淀。">
-  <meta property="og:title" content="这些不是 demo，是每天在生产环境运行的系统。">
-  <meta property="og:description" content="这些不是 demo，是每天在生产环境运行的系统。每一个 Skill，都是踩过坑之后的沉淀。">
-  <meta property="og:image" content="https://agent.nanopromptlab.com/illustrations/og-cover.png">
-  <meta property="og:url" content="https://agent.nanopromptlab.com/skills.html">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="这些不是 demo，是每天在生产环境运行的系统。">
-  <meta name="twitter:description" content="这些不是 demo，是每天在生产环境运行的系统。每一个 Skill，都是踩过坑之后的沉淀。">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,201 +26,130 @@
     <div class="section-label">技能商店</div>
     <h1>Larry 团队的技能包</h1>
     <p>这些不是 demo，是每天在生产环境运行的系统。<br>每一个 Skill，都是踩过坑之后的沉淀。</p>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">最后同步：2026-03-09 01:00 UTC · 15 个已安装技能</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 80px;" id="skillsGrid">
-
-    <!-- 技能包 1：内容全链路发布 -->
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 80px;" id="skillsGrid">
     <div class="skill-card">
       <div>
-        <div class="skill-owner">✍️ 笔杆子</div>
-        <div class="skill-name">内容全链路发布</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">内容创作</span>
-          <span class="tag">自动化</span>
-        </div>
+        <div class="skill-owner">📦 agent-memory</div>
+        <div class="skill-name">agent-memory</div>
       </div>
-      <div class="skill-desc">
-        从选题到发布，一条龙搞定。公众号文章写完自动生成封面图，自动格式化排版，一键发布到微信。支持同步到 X/Twitter Thread，适配小红书图文格式。笔杆子一个人干完原来内容团队三个人的活。
-      </div>
-      <ul class="skill-list">
-        <li><code>baoyu-url-to-markdown</code> — 网页抓取转写作素材</li>
-        <li><code>baoyu-markdown-to-html</code> — Markdown 转公众号 HTML</li>
-        <li><code>baoyu-cover-image</code> — 自动生成文章封面图</li>
-        <li><code>baoyu-post-to-wechat</code> — 一键发布到微信公众号</li>
-        <li><code>baoyu-post-to-x</code> — 发布到 X/Twitter Thread</li>
-        <li><code>baoyu-slide-deck</code> — 内容转演示幻灯片</li>
-      </ul>
-      <div class="skill-count">6 个技能</div>
+      <div class="skill-desc">Persistent memory system for AI agents. Remember facts, learn from experience, and track entities across sessions.</div>
+      <div class="skill-count">clawhub install agent-memory</div>
     </div>
-
-    <!-- 技能包 2：竞品情报雷达 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">🔍 产品参谋长</div>
-        <div class="skill-name">竞品情报雷达</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">竞品分析</span>
-          <span class="tag">实时监控</span>
-        </div>
+        <div class="skill-owner">📦 anti-crawl-fetch</div>
+        <div class="skill-name">anti-crawl-fetch</div>
       </div>
-      <div class="skill-desc">
-        7×24 自动爬取竞品官网、产品更新日志、App 应用商店评论、社交媒体动态。每天自动生成情报摘要，推送到飞书或你指定的频道。参谋长睡觉时也在盯着你的竞争对手。
-      </div>
-      <ul class="skill-list">
-        <li><code>competitor-monitor</code> — 竞品动态实时监控</li>
-        <li><code>review-analyzer</code> — App 评论情感分析</li>
-        <li><code>market-brief</code> — 每日市场情报摘要生成</li>
-        <li><code>trend-radar</code> — 行业趋势关键词追踪</li>
-      </ul>
-      <div class="skill-count">4 个技能</div>
+      <div class="skill-desc">反爬网页抓取技能。当需要读取网页内容、遇到反爬限制、抓取微信公众号文章时激活。按优先级自动尝试三种方法，全部失败才报告。</div>
+      <div class="skill-count">clawhub install anti-crawl-fetch</div>
     </div>
-
-    <!-- 技能包 3：RAG 知识引擎 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">⚙️ 技术专家</div>
-        <div class="skill-name">RAG 知识引擎</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">RAG</span>
-          <span class="tag">知识管理</span>
-        </div>
+        <div class="skill-owner">📦 baoyu-cover-image</div>
+        <div class="skill-name">baoyu-cover-image</div>
       </div>
-      <div class="skill-desc">
-        把你的内部文档、制度手册、会议记录、历史项目变成可检索的私有知识库。支持飞书文档、Notion、本地 PDF、Word 多源接入。员工问任何内规，AI 直接引用原文，附带页码来源。
-      </div>
-      <ul class="skill-list">
-        <li><code>doc-ingestion</code> — 多格式文档向量化入库</li>
-        <li><code>feishu-sync</code> — 飞书文档自动同步索引</li>
-        <li><code>rag-query</code> — 带来源引用的精准问答</li>
-        <li><code>knowledge-update</code> — 知识库自动增量更新</li>
-        <li><code>search-audit</code> — 检索命中率监控与优化</li>
-      </ul>
-      <div class="skill-count">5 个技能</div>
+      <div class="skill-desc">Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 9 color palettes and 6 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1</div>
+      <div class="skill-count">clawhub install baoyu-cover-image</div>
     </div>
-
-    <!-- 技能包 4：Code Agent 交付流水线 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">⚙️ 技术专家</div>
-        <div class="skill-name">Code Agent 交付流水线</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">Code Agent</span>
-          <span class="tag">自动化开发</span>
-        </div>
+        <div class="skill-owner">📦 baoyu-markdown-to-html</div>
+        <div class="skill-name">baoyu-markdown-to-html</div>
       </div>
-      <div class="skill-desc">
-        从需求描述到代码提交，技术专家全程接管。自动写代码、自动运行测试、自动修 bug、自动提 PR，遇到无法解决的问题才会叫醒你。Larry 睡着的时候，技术专家已经提了三个 PR。
-      </div>
-      <ul class="skill-list">
-        <li><code>code-generate</code> — 基于需求自动生成代码</li>
-        <li><code>test-runner</code> — 自动运行测试套件</li>
-        <li><code>bug-fixer</code> — 测试失败自动分析修复</li>
-        <li><code>pr-submitter</code> — 自动提交 Pull Request</li>
-        <li><code>code-review</code> — 代码质量自动审查</li>
-        <li><code>dep-updater</code> — 依赖库安全更新</li>
-        <li><code>deploy-checker</code> — 部署后健康检查</li>
-      </ul>
-      <div class="skill-count">7 个技能</div>
+      <div class="skill-desc">Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, and infographics. Use when user asks for "markdown to html", "convert md </div>
+      <div class="skill-count">clawhub install baoyu-markdown-to-html</div>
     </div>
-
-    <!-- 技能包 5：用户洞察提炼 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">🔍 产品参谋长</div>
-        <div class="skill-name">用户洞察提炼</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">用户研究</span>
-          <span class="tag">产品决策</span>
-        </div>
+        <div class="skill-owner">📦 baoyu-post-to-wechat</div>
+        <div class="skill-name">baoyu-post-to-wechat</div>
       </div>
-      <div class="skill-desc">
-        200 条用户反馈，人工整理要一天，参谋长 30 分钟出结论。支持问卷数据、用户访谈录音转写、App 评论批量分析。输出格式直接可用：问题分类 + 优先级排序 + 行动建议。
-      </div>
-      <ul class="skill-list">
-        <li><code>feedback-cluster</code> — 用户反馈聚类分析</li>
-        <li><code>interview-digest</code> — 访谈录音转写+提炼</li>
-        <li><code>persona-builder</code> — 用户画像自动生成</li>
-        <li><code>priority-matrix</code> — 需求优先级矩阵输出</li>
-      </ul>
-      <div class="skill-count">4 个技能</div>
+      <div class="skill-desc">Posts content to WeChat Official Account (微信公众号) via API or Chrome CDP. Supports article posting (文章) with HTML, markdown, or plain text input, and image-text posting (贴图, formerly 图文) with multiple i</div>
+      <div class="skill-count">clawhub install baoyu-post-to-wechat</div>
     </div>
-
-    <!-- 技能包 6：本地部署全家桶 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">⚙️ 技术专家</div>
-        <div class="skill-name">本地部署全家桶</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">本地部署</span>
-          <span class="tag">安全</span>
-          <span class="tag">系统工程</span>
-        </div>
+        <div class="skill-owner">📦 go-to-market</div>
+        <div class="skill-name">go-to-market</div>
       </div>
-      <div class="skill-desc">
-        敏感数据不出网的完整解决方案。Ollama 本地模型 + systemd 守护进程 + Cloudflare 边缘路由，一套跑通。服务器重启自动拉起，崩溃自动重启，你出差旅行 AI 团队照常运转。
-      </div>
-      <ul class="skill-list">
-        <li><code>ollama-setup</code> — 本地 LLM 环境配置</li>
-        <li><code>systemd-deploy</code> — Agent 服务守护进程配置</li>
-        <li><code>cloudflare-routing</code> — Cloudflare Workers 边缘路由</li>
-        <li><code>ssl-auto-renew</code> — SSL 证书自动续签</li>
-        <li><code>health-monitor</code> — 服务健康状态监控</li>
-        <li><code>backup-restore</code> — 自动备份与恢复机制</li>
-        <li><code>log-aggregation</code> — 多 Agent 日志聚合分析</li>
-        <li><code>resource-guard</code> — 服务器资源占用保护</li>
-      </ul>
-      <div class="skill-count">8 个技能</div>
+      <div class="skill-desc">Build a go-to-market (GTM) strategy for launching a product or entering a new market. Use when planning how to reach customers, position your product, choose channels, set pricing, and execute launch.</div>
+      <div class="skill-count">clawhub install go-to-market</div>
     </div>
-
-    <!-- 技能包 7：多 Agent 任务编排 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">🎯 总指挥</div>
-        <div class="skill-name">多 Agent 任务编排</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">任务编排</span>
-          <span class="tag">多Agent</span>
-          <span class="tag">工作流</span>
-        </div>
+        <div class="skill-owner">📦 mcp-skill</div>
+        <div class="skill-name">mcp-skill</div>
       </div>
-      <div class="skill-desc">
-        一个指令，多个 Agent 并行工作，结果自动汇总。支持顺序执行、并行执行、条件分支，任何环节失败自动重试或降级。Larry 管三个 Agent 的方式，不是一个个发命令，是设计工作流。
-      </div>
-      <ul class="skill-list">
-        <li><code>workflow-designer</code> — 可视化任务编排配置</li>
-        <li><code>parallel-dispatch</code> — 并行任务分发与汇总</li>
-        <li><code>retry-handler</code> — 失败自动重试与降级</li>
-        <li><code>progress-tracker</code> — 任务进度实时追踪</li>
-        <li><code>handoff-protocol</code> — Agent 间工作交接协议</li>
-      </ul>
-      <div class="skill-count">5 个技能</div>
+      <div class="skill-desc">This skill wraps the MCP at https://mcp.exa.ai/mcp for various tools such as web search, deep research, and more.</div>
+      <div class="skill-count">clawhub install mcp-skill</div>
     </div>
-
-    <!-- 技能包 8：Context Engineering 工具箱 -->
     <div class="skill-card">
       <div>
-        <div class="skill-owner">🎯 总指挥</div>
-        <div class="skill-name">Context Engineering 工具箱</div>
-        <div class="skill-tags" style="margin-top: 8px;">
-          <span class="tag">Prompt 工程</span>
-          <span class="tag">系统设计</span>
-        </div>
+        <div class="skill-owner">📦 myclaw-guardian</div>
+        <div class="skill-name">myclaw-guardian</div>
       </div>
-      <div class="skill-desc">
-        不是 Prompt 模板，是上下文系统设计方法论。包含 Larry 3 年实战提炼的：角色定义框架、知识注入策略、输出格式约束、记忆管理机制。拿来就能用，不需要再踩坑。
-      </div>
-      <ul class="skill-list">
-        <li><code>role-architect</code> — AI 角色系统设计工具</li>
-        <li><code>context-injector</code> — 动态知识注入策略</li>
-        <li><code>output-schema</code> — 结构化输出格式设计</li>
-        <li><code>memory-manager</code> — 长对话记忆管理机制</li>
-        <li><code>hallucination-guard</code> — 幻觉检测与防护机制</li>
-        <li><code>eval-suite</code> — 上下文效果自动评估</li>
-      </ul>
-      <div class="skill-count">6 个技能</div>
+      <div class="skill-desc">Deploy and manage a Guardian watchdog for OpenClaw Gateway. Auto-monitor every 30s, self-repair via doctor --fix, git-based workspace rollback, daily snapshots, and optional Discord alerts. Built by M</div>
+      <div class="skill-count">clawhub install myclaw-guardian</div>
     </div>
-
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 product-launch</div>
+        <div class="skill-name">product-launch</div>
+      </div>
+      <div class="skill-desc">Plan and execute a product launch for a solopreneur business. Use when launching a new product, feature, service, or major update. Covers pre-launch strategy, building anticipation, launch day executi</div>
+      <div class="skill-count">clawhub install product-launch</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 rag</div>
+        <div class="skill-name">RAG</div>
+      </div>
+      <div class="skill-desc">Build, optimize, and debug RAG pipelines with chunking strategies, retrieval tuning, evaluation metrics, and production monitoring.</div>
+      <div class="skill-count">clawhub install rag</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 self-improving-agent</div>
+        <div class="skill-name">self-improvement</div>
+      </div>
+      <div class="skill-desc">Captures learnings, errors, and corrections to enable continuous improvement. Use when: (1) A command or operation fails unexpectedly, (2) User corrects Claude ('No, that's wrong...', 'Actually...'), </div>
+      <div class="skill-count">clawhub install self-improving-agent</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 taste-skill</div>
+        <div class="skill-name">design-taste-frontend</div>
+      </div>
+      <div class="skill-desc">Senior UI/UX Engineer. Architect digital interfaces overriding default LLM biases. Enforces metric-based rules, strict component architecture, CSS hardware acceleration, and balanced design engineerin</div>
+      <div class="skill-count">clawhub install taste-skill</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 web-fetch</div>
+        <div class="skill-name">web-fetch</div>
+      </div>
+      <div class="skill-desc">Use when needing to read webpage content, extract text from URLs, fetch article or documentation pages for analysis.</div>
+      <div class="skill-count">clawhub install web-fetch</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 web-scraper</div>
+        <div class="skill-name">web-scraper</div>
+      </div>
+      <div class="skill-desc">Web scraping and content comprehension agent — multi-strategy extraction with cascade fallback, news detection, boilerplate removal, structured metadata, and LLM entity extraction</div>
+      <div class="skill-count">clawhub install web-scraper</div>
+    </div>
+    <div class="skill-card">
+      <div>
+        <div class="skill-owner">📦 web-search</div>
+        <div class="skill-name">web-search</div>
+      </div>
+      <div class="skill-desc">网页搜索技能。当 web_search 工具不可用（缺少 Brave API Key）时激活。使用 DuckDuckGo 多引擎搜索 + web_fetch 提取正文。支持普通搜索、新闻搜索、arXiv 论文搜索。</div>
+      <div class="skill-count">clawhub install web-search</div>
+    </div>
   </div>
 
   <div style="text-align:center; padding: 48px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 80px;">
@@ -248,11 +169,6 @@
       <a href="science.html">原理科普</a> · 
       <a href="skills.html">技能商店</a>
     </p>
-    <div class="footer-social" style="margin-top: 16px; display: flex; gap: 20px; justify-content: center; align-items: center;">
-      <a href="#github" title="GitHub" style="color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">GitHub</a>
-      <a href="#x-twitter" title="X (Twitter)" style="color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">X (Twitter)</a>
-      <a href="#wechat" title="微信公众号" style="color: var(--text-muted); text-decoration: none; font-size: 13px; transition: color 0.2s;" onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">公众号</a>
-    </div>
     <p style="margin-top: 12px; color: var(--text-dim);">agent.nanopromptlab.com · Larry's AI Team</p>
   </div>
 </footer>
@@ -260,12 +176,6 @@
 <style>
 @media (max-width: 768px) {
   #skillsGrid { grid-template-columns: 1fr !important; }
-}
-
-.skill-tags {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
 }
 </style>
 
