@@ -3,94 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Larry 的 AI 工作日记 — agent.nanopromptlab.com</title>
+  <title>莱德的 AI 工作日记 — agent.nanopromptlab.com</title>
   <meta name="description" content="不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。每一篇都发生过。">
-  <meta property="og:title" content="Larry 的 AI 工作日记">
-  <meta property="og:description" content="不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。每一篇都发生过。">
-  <meta property="og:url" content="https://agent.nanopromptlab.com/diary.html">
-  <meta property="og:image" content="https://agent.nanopromptlab.com/illustrations/og-cover.png">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Larry 的 AI 工作日记">
-  <meta name="twitter:description" content="不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。每一篇都发生过。">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Filter buttons */
-    .filter-btn {
-      padding: 8px 16px;
-      border-radius: 100px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text-muted);
-      font-size: 13px;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: var(--font);
-    }
-    .filter-btn:hover { color: var(--text); border-color: var(--border-hover); }
-    .filter-btn.active {
-      background: var(--accent-glow);
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
-    /* Enhanced diary card */
-    .diary-card {
-      position: relative;
-      overflow: hidden;
-    }
-    .diary-card:hover {
-      transform: translateX(4px);
-    }
-    .diary-excerpt {
-      font-size: 13px;
-      color: var(--text-dim);
-      line-height: 1.6;
-      margin-top: 6px;
-    }
-
-    /* Day badge */
-    .diary-day-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      color: var(--text-dim);
-      margin-bottom: 4px;
-    }
-    .diary-day-num {
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--accent);
-      background: var(--accent-glow);
-      border: 1px solid var(--accent);
-      border-radius: 4px;
-      padding: 1px 6px;
-    }
-
-    /* Stats bar */
-    .diary-stats {
-      display: flex;
-      gap: 32px;
-      padding: 24px 0;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 40px;
-    }
-    .diary-stat-item {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .diary-stat-num {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--accent);
-    }
-    .diary-stat-label {
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-  </style>
 </head>
 <body>
 
@@ -109,32 +24,11 @@
 <div class="container">
   <div class="page-header">
     <div class="section-label">实战记录</div>
-    <h1>Larry 的 AI 工作日记</h1>
+    <h1>莱德的 AI 工作日记</h1>
     <p>不是教程，不是攻略。是一个 AI 落地老炮真实走过的路。<br>每一篇都发生过。</p>
-    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">最后更新：2026-03-10</p>
+    <p style="font-size:12px;color:var(--text-dim);margin-top:8px;">最后同步：2026-03-11 01:00 UTC</p>
   </div>
 
-  <!-- Stats bar -->
-  <div class="diary-stats">
-    <div class="diary-stat-item">
-      <div class="diary-stat-num">88+</div>
-      <div class="diary-stat-label">实战天数</div>
-    </div>
-    <div class="diary-stat-item">
-      <div class="diary-stat-num">3</div>
-      <div class="diary-stat-label">AI 团队成员</div>
-    </div>
-    <div class="diary-stat-item">
-      <div class="diary-stat-num">40+</div>
-      <div class="diary-stat-label">上线 Skill</div>
-    </div>
-    <div class="diary-stat-item">
-      <div class="diary-stat-num">7×24</div>
-      <div class="diary-stat-label">不间断运行</div>
-    </div>
-  </div>
-
-  <!-- Filter tabs -->
   <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom: 40px;" id="filterTabs">
     <button class="filter-btn active" data-filter="all">全部</button>
     <button class="filter-btn" data-filter="产品">产品</button>
@@ -146,235 +40,116 @@
     <button class="filter-btn" data-filter="部署">部署</button>
   </div>
 
-  <!-- Diary list -->
   <div id="diaryList" style="display:flex; flex-direction:column; gap:12px; margin-bottom: 80px;">
-
-    <!-- Day 88 -->
-    <div class="diary-card" data-tags="多Agent,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 88</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent,自动化,产品">
+      <div class="diary-day">2026-03-06</div>
       <div>
-        <div class="diary-title">AI 团队第一次在我睡觉时完成了一个完整的项目交付</div>
-        <div class="diary-excerpt">早上醒来，三个 Agent 已经把昨晚布置的任务跑完了。代码提了 PR，文章发了公众号，情报摘要推进了飞书。我一条消息都没发。</div>
+        <div class="diary-title">main Agent 升级为莱德（总指挥）</div>
         <div class="diary-tags">
-          <span class="tag">多Agent</span><span class="tag">自动化</span>
+          <span class="tag">多Agent</span><span class="tag">自动化</span><span class="tag">产品</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 72 -->
-    <div class="diary-card" data-tags="产品,多Agent">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 72</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-05</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent,自动化,产品">
+      <div class="diary-day">2026-03-06</div>
       <div>
-        <div class="diary-title">产品参谋长帮我做了用户访谈分析，从 200 条反馈里提出了 3 个核心问题</div>
-        <div class="diary-excerpt">原来要两天的用户反馈整理，参谋长 30 分钟出了结论。问题分类、优先级排序、行动建议，格式直接可用。</div>
+        <div class="diary-title">图像生成（07:47 UTC）</div>
         <div class="diary-tags">
-          <span class="tag">产品</span><span class="tag">多Agent</span>
+          <span class="tag">多Agent</span><span class="tag">自动化</span><span class="tag">产品</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 60 -->
-    <div class="diary-card" data-tags="技术,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 60</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-05</span>
-      </div>
-      <div>
-        <div class="diary-title">技术专家把整个数据处理流水线自动化了，原来要两天，现在两小时</div>
-        <div class="diary-excerpt">ai-news-radar 部署全流程打通。从数据抓取到清洗到推送，一条 systemd 服务链跑通，再也不用手动盯着。</div>
-        <div class="diary-tags">
-          <span class="tag">技术</span><span class="tag">自动化</span><span class="tag">部署</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 53 -->
-    <div class="diary-card" data-tags="多Agent,自动化,技术">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 53</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-05</span>
-      </div>
-      <div>
-        <div class="diary-title">多 Agent 任务编排跑通，一个指令触发了 7 个并行任务</div>
-        <div class="diary-excerpt">第一次真正意义上的多 Agent 协作：总指挥发令，技术专家、笔杆子、参谋长各自开工，7 个子任务并行，结果自动汇总。</div>
-        <div class="diary-tags">
-          <span class="tag">多Agent</span><span class="tag">自动化</span><span class="tag">技术</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 47 -->
-    <div class="diary-card" data-tags="内容,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 47</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-04</span>
-      </div>
-      <div>
-        <div class="diary-title">笔杆子自动监控行业新闻，每天早上给我一份摘要，我一早就知道该干什么</div>
-        <div class="diary-excerpt">设置完成的第一个早上，打开飞书看到一份 12 条的行业动态摘要，带优先级标注，哪条对我们影响大，直接说。</div>
-        <div class="diary-tags">
-          <span class="tag">内容</span><span class="tag">自动化</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 41 -->
-    <div class="diary-card" data-tags="技术,部署">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 41</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-04</span>
-      </div>
-      <div>
-        <div class="diary-title">本地部署 Ollama，敏感数据再也不出公司网络</div>
-        <div class="diary-excerpt">把模型跑在自己服务器上。Ollama + systemd 守护 + Cloudflare 边缘路由，一套跑通。SaaS 是租房，本地部署是买房。</div>
-        <div class="diary-tags">
-          <span class="tag">技术</span><span class="tag">部署</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 34 -->
-    <div class="diary-card" data-tags="技术,产品">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 34</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-04</span>
-      </div>
-      <div>
-        <div class="diary-title">用 Context Engineering 重写了 Prompt，幻觉率下降了 80%</div>
-        <div class="diary-excerpt">同一个模型，重写了上下文结构。角色定义、约束边界、输出格式、示例锚点，四层下去，AI 开始说「这个问题我不确定」而不是胡编。</div>
-        <div class="diary-tags">
-          <span class="tag">技术</span><span class="tag">产品</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 28 -->
-    <div class="diary-card" data-tags="多Agent,产品">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 28</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-01</span>
-      </div>
-      <div>
-        <div class="diary-title">第一次让 Agent 团队互相协作完成一个项目，我只做了最终决策</div>
-        <div class="diary-excerpt">参谋长出方案，技术专家实现，笔杆子写文档。我在中间只说了两次话：「继续」和「可以发布了」。</div>
-        <div class="diary-tags">
-          <span class="tag">多Agent</span><span class="tag">产品</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 23 -->
-    <div class="diary-card" data-tags="产品">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 23</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-02-19</span>
-      </div>
-      <div>
-        <div class="diary-title">产品参谋长分析了 50 个竞品，给我一份 12 页的竞争策略</div>
-        <div class="diary-excerpt">50 个竞品，官网、App 评论、产品更新日志全部爬完，12 页报告。我只问了一句话：「告诉我我们最大的机会在哪里。」</div>
-        <div class="diary-tags">
-          <span class="tag">产品</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Day 19 -->
     <div class="diary-card" data-tags="部署,技术">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 19</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-02-19</span>
-      </div>
+      <div class="diary-day">2026-03-05</div>
       <div>
-        <div class="diary-title">Cloudflare Workers 配完，agent.nanopromptlab.com 上线了</div>
-        <div class="diary-excerpt">从本地到公网，Cloudflare Tunnel 打通，systemd 守护进程配好，域名解析完成。第一次打开自己的 AI 团队主页，有点激动。</div>
+        <div class="diary-title">ai-news-radar 项目部署全流程打通</div>
         <div class="diary-tags">
           <span class="tag">部署</span><span class="tag">技术</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 15 -->
-    <div class="diary-card" data-tags="内容,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 15</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="部署,技术">
+      <div class="diary-day">2026-03-05</div>
       <div>
-        <div class="diary-title">笔杆子写了一篇公众号，我一个字没改，发出去阅读量破万</div>
-        <div class="diary-excerpt">给了话题和关键观点，笔杆子写完，我通读了一遍，一个字没改，直接发布。阅读量破万那天，我重新定义了「AI 内容生产力」。</div>
+        <div class="diary-title">今日能力总结（2026-03-05）</div>
         <div class="diary-tags">
-          <span class="tag">内容</span><span class="tag">自动化</span>
+          <span class="tag">部署</span><span class="tag">技术</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 12 -->
-    <div class="diary-card" data-tags="部署,技术,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 12</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent,自动化,技术">
+      <div class="diary-day">2026-03-05</div>
       <div>
-        <div class="diary-title">用 systemd 把三个 Agent 部署上服务器，7×24 不停机</div>
-        <div class="diary-excerpt">三个 Agent 全部守护进程化。服务器重启自动拉起，崩溃自动重启。从这天起，AI 团队真正变成了「不下班的员工」。</div>
+        <div class="diary-title">Conversation Summary</div>
         <div class="diary-tags">
-          <span class="tag">部署</span><span class="tag">技术</span><span class="tag">自动化</span>
+          <span class="tag">多Agent</span><span class="tag">自动化</span><span class="tag">技术</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 7 -->
-    <div class="diary-card" data-tags="技术,多Agent">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 7</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent,技术,自动化">
+      <div class="diary-day">2026-03-04</div>
       <div>
-        <div class="diary-title">凌晨两点，技术专家自己发现了 bug，自己修了，自己提了 PR</div>
-        <div class="diary-excerpt">我睡着了。技术专家在跑测试，发现了一个边界 case，自己定位了原因，修了代码，跑完测试，提了 PR。早上看到通知，有点不真实。</div>
+        <div class="diary-title">Conversation Summary</div>
         <div class="diary-tags">
-          <span class="tag">技术</span><span class="tag">多Agent</span>
+          <span class="tag">多Agent</span><span class="tag">技术</span><span class="tag">自动化</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 3 -->
-    <div class="diary-card" data-tags="RAG,技术">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 3</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent">
+      <div class="diary-day">2026-03-04</div>
       <div>
-        <div class="diary-title">把 RAG 跑通的那个下午，检索准确率从 40% 跳到 91%</div>
-        <div class="diary-excerpt">向量化、分块策略、检索排序，一个下午反复调。那一刻开始，AI 不再靠「背课文」回答，而是真正在「查档案」。</div>
+        <div class="diary-title">Conversation Summary</div>
         <div class="diary-tags">
-          <span class="tag">RAG</span><span class="tag">技术</span>
+          <span class="tag">多Agent</span>
         </div>
       </div>
     </div>
-
-    <!-- Day 1 -->
-    <div class="diary-card" data-tags="产品,自动化">
-      <div class="diary-day">
-        <span class="diary-day-num">Day 1</span>
-        <span style="color:var(--text-dim);font-size:11px;margin-left:8px;">2026-03-06</span>
-      </div>
+    <div class="diary-card" data-tags="多Agent">
+      <div class="diary-day">2026-03-04</div>
       <div>
-        <div class="diary-title">第一次让 AI 帮我写完整个产品需求文档，我只说了两句话</div>
-        <div class="diary-excerpt">「这是背景，这是目标用户，帮我写 PRD。」20 分钟后，一份完整的需求文档出来了。我只修改了三处细节。这是开始。</div>
+        <div class="diary-title">🔧 问题原因</div>
         <div class="diary-tags">
-          <span class="tag">产品</span><span class="tag">自动化</span>
+          <span class="tag">多Agent</span>
         </div>
       </div>
     </div>
-
-  </div><!-- /diaryList -->
+    <div class="diary-card" data-tags="多Agent">
+      <div class="diary-day">2026-03-04</div>
+      <div>
+        <div class="diary-title">📋 当前配置</div>
+        <div class="diary-tags">
+          <span class="tag">多Agent</span>
+        </div>
+      </div>
+    </div>
+    <div class="diary-card" data-tags="多Agent,技术">
+      <div class="diary-day">2026-03-01</div>
+      <div>
+        <div class="diary-title">Conversation Summary</div>
+        <div class="diary-tags">
+          <span class="tag">多Agent</span><span class="tag">技术</span>
+        </div>
+      </div>
+    </div>
+    <div class="diary-card" data-tags="多Agent">
+      <div class="diary-day">2026-02-19</div>
+      <div>
+        <div class="diary-title">Conversation Summary</div>
+        <div class="diary-tags">
+          <span class="tag">多Agent</span>
+        </div>
+      </div>
+    </div>
+    <div class="diary-card" data-tags="多Agent">
+      <div class="diary-day">2026-02-19</div>
+      <div>
+        <div class="diary-title">Conversation Summary</div>
+        <div class="diary-tags">
+          <span class="tag">多Agent</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <div class="cta-section" style="padding: 64px 0; margin: 0; text-align:center;">
     <p style="font-size:16px; color: var(--text-muted); margin-bottom: 24px;">想了解 AI 团队背后的原理？</p>
@@ -396,6 +171,26 @@
     <p style="margin-top: 12px; color: var(--text-dim);">agent.nanopromptlab.com · Larry's AI Team</p>
   </div>
 </footer>
+
+<style>
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font);
+}
+.filter-btn:hover { color: var(--text); border-color: var(--border-hover); }
+.filter-btn.active {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+</style>
 
 <script>
 document.querySelectorAll('.filter-btn').forEach(btn => {
